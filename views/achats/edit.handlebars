@@ -6,7 +6,8 @@
             <input type="hidden" name="_method" value="PUT">
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Saisir le nom" id="first_name" type="text" value="{{produit.nom}}" class="validate" name="nom" required
+                    <input placeholder="Saisir le nom" id="first_name" type="text" value="{{produit.nom}}"
+                        class="validate" name="nom" required
                         oninvalid="this.setCustomValidity('Veuillez saisir un Nom , Baliz!')"
                         oninput="setCustomValidity('')">
                     <label for="nomp">Nom du produit</label>
@@ -33,13 +34,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>
+                    <p class="cat">
                         <label> Categorie <br><br>
                             <input name="categorie" value="Nutrition" type="radio" checked />
                             <span>Compléments alimentaires</span>
                         </label>
                     </p>
-                    <p>
+                    <p class="cat">
                         <label>
                             <input name="categorie" value="Vetements" type="radio" />
                             <span>Vetements de sports</span>

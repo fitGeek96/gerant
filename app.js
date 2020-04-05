@@ -73,14 +73,7 @@ app.use(bodyParser.json());
 // Method override middleware
 app.use(methodOverride("_method"));
 
-// Express session midleware
-app.use(
-  session({
-    secret: "secret",
-    resave: true,
-    saveUninitialized: true
-  })
-);
+
 
 // Index Route
 app.get("/", (req, res) => {
@@ -147,12 +140,12 @@ app.get("/membres/edit/:id", (req, res) => {
 });
 
 
-// Edit membre Form
+// Edit produit Form
 app.get("/achats/edit/:id", (req, res) => {
-  Membre.findOne({
+  Produit.findOne({
     _id: req.params.id
   }).then(produit => {
-    res.render("produits/edit", {
+    res.render("achats/edit", {
       produit: produit
     });
   });

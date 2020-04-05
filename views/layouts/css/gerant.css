@@ -230,3 +230,7 @@ input.search-field:focus:hover {
 .card p {
   text-align: left !important;
 }
+
+input {
+  text-align: left !important;
+}
