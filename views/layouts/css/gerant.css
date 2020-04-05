@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
+
+
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* SIDEBAR CONTENT  */
+
+a {
+  display: block;
+  margin-left: 1rem;
+  text-decoration: none !important;
+  color: silver !important;
+}
+
+a:hover {
+  color: tomato !important;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+i {
+  margin-top: 1rem;
+  color: white !important;
+  margin-right: 1rem;
+}
+
+.row {
+  margin-bottom: 0 !important;
+}
+
+.row .col.l3 {
+  height: 100%;
+  width: 25%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  padding-bottom: 50%;
+  color: white;
+  background: linear-gradient(rgb(44, 83, 100),
+      rgb(32, 58, 67),
+      rgb(15, 32, 39));
+}
+
+.item {
+  display: block;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* MAIN CONTENT */
+
+p {
+  color: darkgray;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.addd {
+  margin: 0 1rem;
+  padding-top: 0.4rem;
+  color: black !important;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+.container {
+  text-align: center;
+  padding: 7% 15%;
+  width: 90% !important;
+}
+
+.row .col.l9 {
+  padding: 0;
+}
+
+.nav-wrapper ul li a {
+  text-decoration: none;
+  color: whitesmoke !important;
+}
+
+.material-icons {
+  color: whitesmoke;
+}
+
+.nav-wrapper {
+  background: linear-gradient(rgb(44, 83, 100),
+      rgb(32, 58, 67),
+      rgb(15, 32, 39));
+}
+
+.row .col.l9 #dropdown1 li a {
+  color: teal !important;
+}
+
+/* FORNULAIRE */
+
+.row .col.s7 {
+  width: 100% !important;
+  text-align: left;
+}
+
+.foto {
+  font-size: 1.5rem;
+  color: white;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: white !important;
+}
+
+.card_items {
+  color: black;
+  text-align: left !important;
+}
+
+.card {
+  margin: 0 !important;
+  position: relative;
+  display: inline-block;
+}
+
+.card-content {
+  margin-top: .7rem;
+}
+
+.card-content p {
+  font-size: 1.1em;
+}
+
+#form {
+  padding: 0% 15%;
+}
+
+#ajouter {
+  margin-right: 3rem;
+}
+
+#vip {
+  margin-right: 6rem;
+}
+
+#cardd {
+  padding: 1rem 19rem 1rem 1rem;
+  margin: 0;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+
+
+
+/* search bar */
+
+input.search-field {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.54);
+  border-radius: 2px;
+  border: 0;
+  border-radius: 5px;
+  height: 36px;
+  padding: 8px 8px 8px 60px;
+  width: 200px;
+  background: #96a0f6;
+  transition: background 0.2s, width .2s;
+}
+
+input.search-field:hover {
+  background: #ebebeb;
+}
+
+.searchbox {
+  position: relative;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.54);
+}
+
+input.search-field:focus {
+  outline: none;
+  width: 500px;
+  color: #212121;
+}
+
+input.search-field:focus:hover {
+  background: #fbff00;
+}
+
+.search-icon {
+  position: absolute;
+  top: 0;
+  padding-left: 20px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.search-content {
+  color: #303c42;
+  width: 90%;
+  margin: auto;
+  height: auto;
+  padding: 8px 10px;
+}
+
+.search-heading {
+  color: #757575;
+  display: block;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.produits_items p {
+  color: whitesmoke;
+}
+
+.card p {
+  text-align: left !important;
+}

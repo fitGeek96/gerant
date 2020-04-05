@@ -1,0 +1,68 @@
+<div class="container" id="cardd" style=" padding-right:1rem; width: 100%;">
+    <div class="row">
+
+
+        <div class="col s7">
+            {{#each membres}}
+            <div class="card Medium">
+
+                {{#if typeC}}
+                <div class="card-image">
+                    <img src="../layouts/images/{{avatar}}">
+                    <span class="card-title">{{ID}}</span>
+                    <a href="" class="btn-floating halfway-fab waves-effect waves-light green" id="vip"><i
+                            class="material-icons foto">verified_user</i></a>
+                    <a href="/membres/edit/{{id}}" class="btn-floating halfway-fab waves-effect waves-light blue"
+                        id="ajouter"><i class="material-icons foto">create</i></a>
+                    <form action="/membres/{{id}}?_method=DELETE" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" value="delete"
+                            class="btn-floating halfway-fab waves-effect waves-light red"> <i
+                                class="material-icons foto">delete</i> </button>
+                    </form>
+                </div>
+
+                {{else}}
+                <div class="card-image">
+                    <img src="../layouts/images/{{avatar}}">
+                    <span class="card-title">{{ID}}</span>
+                    <a href="/membres/edit/{{id}}" class="btn-floating halfway-fab waves-effect waves-light blue"
+                        id="ajouter"><i class="material-icons foto">create</i></a>
+                    <form action="/membres/{{id}}?_method=DELETE" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" value="delete"
+                            class="btn-floating halfway-fab waves-effect waves-light red"> <i
+                                class="material-icons foto">delete</i> </button>
+                    </form>
+                </div>
+
+                {{/if}}
+
+
+                <div class="card-content">
+                    <p> <span class="card_items">Nom :</span> {{nom}}</p>
+                    <p> <span class="card_items"> Prénom :</span> {{prenom}} </p>
+                    <p> <span class="card_items"> Date de naissance :</span> {{ddn}}</p>
+                    <p> <span class="card_items">Téléphone : </span> 0{{phone}}</p>
+                    <p> <span class="card_items">Email : </span> {{email}}</p>
+                    <p> <span class="card_items"> Type de Sport : </span>{{typeS}}</p>
+                    <p> <span class="card_items"> Type de Convention : </span>{{typeC}}</p>
+                    <p> <span class="card_items">Sexe :</span> {{sexe}}</p>
+
+                </div>
+            </div>
+
+            {{else}}
+
+
+            <h3 style="color: red;">
+                ID INTROUVABLE !!!
+            </h3>
+
+
+
+
+            {{/each}}
+        </div>
+    </div>
+</div>

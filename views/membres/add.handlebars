@@ -1,0 +1,133 @@
+<div class="container" id="form">
+
+
+    <div class="row">
+        <form class="col s12" action="/membres" method="POST">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Saisir le nom" id="first_name" type="text" class="validate" name="nom" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir un Nom Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="first_name">Nom</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate" name="prenom" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir un Prenom Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="last_name">Prénom</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="ddn" type="date" name="ddn" class="validate" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir la date de naissance Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="ddn">Date de naissance</label>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" name="email" class="validate" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir une Adresse Email valide, Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="email">Email</label>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="telephone" type="tel" name="tele" class="validate" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir un Numero de telephone Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="telephone">Téléphone</label>
+                    <span class="helper-text" data-error="Invalid" data-success=""></span>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select multiple required name="typeS"
+                        oninvalid="this.setCustomValidity('Veuillez saisir un Numero de telephone Baliz!')"
+                        oninput="setCustomValidity('')">
+
+                        <option value="" disabled selected>Choississez le type de sport</option>
+
+                        <option value="Fitness">Fitness</option>
+                        <option value="MMA">MMA</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Natation">Natation</option>
+
+                    </select>
+                    <label>Type de sport</label>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select name="typeC">
+                        <option value="" disabled selected>Choississez le type de convention</option>
+                        <option value="Militaire">Militaire</option>
+                        <option value="Police">Police</option>
+                        <option value="CASORO">CASORO</option>
+
+
+                    </select>
+                    <label>VIP</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="text" class="validate" name="ID" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir un ID, Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="ID">Matricule du client ID</label>
+                    <span class="helper-text" data-error="Invalid" data-success=""></span>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    <label>
+                        <input name="sexe" value="homme" type="radio" checked />
+                        <span>Homme</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="sexe" value="femme" type="radio" />
+                        <span>Femme</span>
+                    </label>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="file-field input-field">
+                    <div class="btn waves-effect waves-light cyan darken-3">
+                        <i class="large material-icons foto">add_a_photo</i>
+                        <input type="file" name="avatar" required
+                            oninvalid="this.setCustomValidity('Veuillez inserer une image!')"
+                            oninput="setCustomValidity('')">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <button class="btn waves-effect waves-light cyan darken-3 foto" type="submit" name="action">S'inscrire
+                <i class="material-icons right foto">send</i>
+            </button>
+
+        </form>
+    </div>
+
+</div>

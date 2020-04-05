@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script src="handlebars/dist/handlebars.min.js"></script>
+    <script src="handlebars-intl/dist/handlebars-intl.min.js"></script>
+    <script src="handlebars-intl/dist/locale-data/fr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/../layouts/css/gerant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- FONT AWSOME LINK -->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+        integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous">
+        </script>
+    <!-- GOOGLE FONTS -->
+    <link href=" https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Dashboard</title>
+</head>
+
+<div class="row">
+
+    <div class="col s12 m4 l3">
+
+        <h4>Anti-stress Gym</h3>
+            <hr>
+            <br>
+            <br>
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img src="../layouts/images/monochrome-photo-of-smiling-woman-2764975.jpg" alt="me"
+                        class="circle responsive-img">
+                    <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                    <span class="white-text">
+                        Benramdane Tahar
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <a href="/"><i class="material-icons">people</i>Gestion des inscriptions</a>
+                <a href="../emplois"><i class="material-icons">date_range</i>Gestion d'emploi du
+                    temps</a>
+                <a href="../achats"><i class="material-icons">shopping_cart</i>Gestion des achats </a>
+                <a href="../rapports"><i class="material-icons">description</i>Gestion des rapports
+                </a>
+            </div>
+
+
+
+
+    </div>
+
+
+    <div class="col s12 m8 l9">
+
+
+
+
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="/membres">Membres</a></li>
+            <li><a href="/membres/add">Ajouter Membres</a></li>
+            <li><a href="/achats">Achats</a></li>
+            <li><a href="/achats/add">Ajouter un Produits</a></li>
+
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <form class="col s12" action="/membres/trouver" class="browser-default right" method="GET">
+                            <input id="search-input" placeholder="Search" type="text"
+                                class="browser-default search-field" name="q" autocomplete="on" aria-label="Search box">
+                            <i class="material-icons search-icon foto">search</i>
+                    </li>
+                    </form>
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="#">plus</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        {{{body}}}
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+    });
+
+
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let box = document.getElementById("scale");
+        setTimeout(function () {
+            box.classList.add("scale-in");
+        }, 500);
+    });
+
+    /* hide when expanded*/
+    document.querySelector(".search-field").addEventListener("focus", function () {
+        let hidden = document.querySelectorAll(".search-hide");
+
+        for (let i = 0; i < hidden.length; ++i) {
+            hidden[i].style.display = "none";
+        }
+    });
+
+    /* show when expanded*/
+    document
+        .querySelector(".search-field")
+        .addEventListener("focusout", function () {
+            let hidden = document.querySelectorAll(".search-hide");
+            for (let i = 0; i < hidden.length; ++i) {
+                hidden[i].style.display = "block";
+            }
+        });
+
+
+
+
+    // Event listener for keypress in search box/open
+    document.getElementById('search-input').addEventListener('keyup', searchEngine);
+    document.getElementById('search-input').addEventListener('focus', searchEngine);
+
+
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

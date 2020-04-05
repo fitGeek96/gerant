@@ -1,0 +1,37 @@
+<div class="container" id="cardd" style=" padding-right:1rem; width: 100%;">
+    <div class="row">
+
+
+        <div class="col s7">
+            {{#each produits}}
+            <div class="card Medium grey">
+
+
+                <div class="card-image">
+                    <img src="../layouts/images/{{avatarP}}">
+                    <a href="/achats/edit/{{id}}" class="btn-floating halfway-fab waves-effect waves-light blue"
+                        id="ajouter"><i class="material-icons foto">create</i></a>
+                    <form action="/achats/{{id}}?_method=DELETE" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" value="delete"
+                            class="btn-floating halfway-fab waves-effect waves-light red"> <i
+                                class="material-icons foto">delete</i> </button>
+                    </form>
+                </div>
+
+                <div class="card-content produits_items" id="pro">
+                    <p> <span class="card_items"> Nom du Produit :</span> {{nom}}</p>
+                    <p> <span class="card_items"> Categorie :</span> {{categorie}} </p>
+                    <p> <span class="card_items"> Numero du produit :</span> {{np}}</p>
+                    <p> <span class="card_items"> Quantité :</span> {{qte}}</p>
+
+
+                </div>
+            </div>
+
+
+
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="container" id="form">
+
+
+    <div class="row">
+        <form class="col s12" action="/achats" method="POST">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Saisir le nom" id="first_name" type="text" class="validate" name="nom" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir un Nom , Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="nomp">Nom du produit</label>
+                </div>
+
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="text" type="text" class="validate" name="np" required
+                            oninvalid="this.setCustomValidity('Veuillez saisir un Matricule du Produit, Baliz!')"
+                            oninput="setCustomValidity('')">
+                        <label for="np">Matricule du Produit</label>
+                        <span class="helper-text" data-error="Invalid" data-success=""></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="text" type="number" class="validate" name="qte" required
+                            oninvalid="this.setCustomValidity('Veuillez saisir une Quantité, Baliz!')"
+                            oninput="setCustomValidity('')">
+                        <label for="np">Quantité</label>
+                        <span class="helper-text" data-error="Invalid" data-success=""></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>
+                        <label> Categorie <br><br>
+                            <input name="categorie" value="Nutrition" type="radio" checked />
+                            <span>Compléments alimentaires</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="categorie" value="Vetements" type="radio" />
+                            <span>Vetements de sports</span>
+                        </label>
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field">
+                        <div class="btn waves-effect waves-light cyan darken-3">
+                            <i class="large material-icons foto">add_a_photo</i>
+                            <input type="file" name="avatarP" required
+                                oninvalid="this.setCustomValidity('Veuillez inserer une image!')"
+                                oninput="setCustomValidity('')">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <button class="btn waves-effect waves-light cyan darken-3 foto" type="submit" name="action">Ajouter au
+                    stock
+                    <i class="material-icons right foto">send</i>
+                </button>
+
+        </form>
+    </div>
+
+</div>
