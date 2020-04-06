@@ -49,6 +49,9 @@ require("./models/Produit");
 const Produit = mongoose.model("produits");
 
 
+// Load Emploi Model
+require("./models/Emploi");
+const Emploi = mongoose.model("jours");
 
 // Handlebars Middleware
 app.engine(
@@ -116,6 +119,24 @@ app.get("/achats", (req, res) => {
 });
 
 
+// emplois  Page
+app.get("/emplois", (req, res) => {
+
+  const title = "Emploi du temps d'entrainement";
+
+  Emploi.find({}).sort({
+      date: "desc"
+    })
+    .then(jours => {
+      res.render("emplois/emploi", {
+        jours: jours,
+        title: title
+      });
+    });
+
+});
+
+
 // // Add membre Form
 app.get("/membres/add", (req, res) => {
   res.render("membres/add");
@@ -125,6 +146,17 @@ app.get("/membres/add", (req, res) => {
 
 app.get("/achats/add", (req, res) => {
   res.render("achats/add");
+});
+
+
+// EMPLOI DU TEMPS
+
+app.get("/emplois/add", (req, res) => {
+  const title = "Modification d'Emploi du temps d'entrainement";
+
+  res.render("emplois/add", {
+    tit: title
+  });
 });
 
 
@@ -152,13 +184,24 @@ app.get("/achats/edit/:id", (req, res) => {
 });
 
 
+// Edit emploi Form
+app.get("/emplois/edit/:id", (req, res) => {
+  Emploi.findOne({
+    _id: req.params.id
+  }).then(jour => {
+    res.render("emplois/edit", {
+      jour: jour
+    });
+  });
+});
+
+
+
 
 // Trouver membre Form
-app.get("/membres/trouver", (req, res) => {
+app.get("/trouver", (req, res) => {
 
   const userID = req.query.q;
-
-
 
   if (userID) {
     Membre.find({
@@ -168,12 +211,16 @@ app.get("/membres/trouver", (req, res) => {
         if (err) {
           console.log(err);
         } else {
-          res.render("membres/trouver", {
+          res.render("trouver", {
             membres: foundmembres
           });
         }
       });
+
   }
+
+
+
 });
 
 
@@ -219,6 +266,32 @@ app.post("/achats", (req, res) => {
   });
 });
 
+// Emploi Process Form
+
+app.post("/emplois", (req, res) => {
+  const newTraining = {
+    timeD: req.body.timeD,
+    sportD: req.body.sportD,
+    timeL: req.body.timeL,
+    sportL: req.body.sportL,
+    timeM: req.body.timeM,
+    sportM: req.body.sportM,
+    timeMer: req.body.timeMer,
+    sportMer: req.body.sportMer,
+    timeJ: req.body.timeJ,
+    sportJ: req.body.sportJ,
+    timeV: req.body.timeV,
+    sportV: req.body.sportV,
+    timeS: req.body.timeS,
+    sportS: req.body.sportS
+
+  };
+
+  new Emploi(newTraining).save().then(jour => {
+    res.redirect("/emplois");
+  });
+});
+
 
 // // Edit Form process
 app.put("/membres/:id", (req, res) => {
@@ -258,6 +331,35 @@ app.put("/achats/:id", (req, res) => {
 
     produit.save().then(produit => {
       res.redirect("/achats");
+    });
+  });
+});
+
+// // Edit Form process Produits
+app.put("/emplois/:id", (req, res) => {
+  Emploi.findOne({
+    _id: req.params.id
+  }).then(jour => {
+    // new values
+
+    jour.timeD = req.body.timeD;
+    jour.sportD = req.body.sportD;
+    jour.timeL = req.body.timeL;
+    jour.sportL = req.body.sportL;
+    jour.timeM = req.body.timeM;
+    jour.sportM = req.body.sportM;
+    jour.timeMer = req.body.timeMer;
+    jour.sportMer = req.body.sportMer;
+    jour.timeJ = req.body.timeJ;
+    jour.sportJ = req.body.sportJ;
+    jour.timeV = req.body.timeV;
+    jour.sportV = req.body.sportV;
+    jour.timeS = req.body.timeS;
+    jour.sportS = req.body.sportS;
+
+
+    jour.save().then(jour => {
+      res.redirect("/emplois");
     });
   });
 });

@@ -61,7 +61,7 @@ i {
 
 p {
   color: darkgray;
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
@@ -129,7 +129,7 @@ p {
 }
 
 .card {
-  margin: 0 !important;
+  margin: 1rem 0 0 0 !important;
   position: relative;
   display: inline-block;
 }
@@ -233,4 +233,37 @@ input.search-field:focus:hover {
 
 input {
   text-align: left !important;
+}
+
+
+/* emploi du temps */
+
+
+
+
+#jours {
+  color: tomato;
+}
+
+#table.centered tbody tr td {
+  padding: 0 2rem;
+}
+
+#table {
+  margin: 3rem 0 0 2rem;
+  padding: 0;
+
+}
+
+#table p {
+  text-align: center !important;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+#table p {
+  width: 30% !important;
+  display: inline-flex !important;
 }

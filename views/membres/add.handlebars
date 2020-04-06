@@ -52,9 +52,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <select multiple required name="typeS"
-                        oninvalid="this.setCustomValidity('Veuillez saisir un Numero de telephone Baliz!')"
-                        oninput="setCustomValidity('')">
+                    <select multiple name="typeS" class="validate" required>
 
                         <option value="" disabled selected>Choississez le type de sport</option>
 
@@ -65,18 +63,18 @@
 
                     </select>
                     <label>Type de sport</label>
+                    <span class="helper-text" data-error="Choississez le type de sport, BALIIZ!" data-success=""></span>
 
 
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <select name="typeC">
+                    <select multiple name="typeC">
                         <option value="" disabled selected>Choississez le type de convention</option>
                         <option value="Militaire">Militaire</option>
                         <option value="Police">Police</option>
                         <option value="CASORO">CASORO</option>
-
 
                     </select>
                     <label>VIP</label>
@@ -89,7 +87,7 @@
                         oninvalid="this.setCustomValidity('Veuillez saisir un ID, Baliz!')"
                         oninput="setCustomValidity('')">
                     <label for="ID">Matricule du client ID</label>
-                    <span class="helper-text" data-error="Invalid" data-success=""></span>
+                    <span class="helper-text" data-error="" data-success=""></span>
                 </div>
             </div>
             <div class="row">

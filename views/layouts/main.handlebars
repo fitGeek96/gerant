@@ -52,7 +52,8 @@
             </div>
 
             <div>
-                <a href="/"><i class="material-icons">people</i>Gestion des inscriptions</a>
+                <a href="/"><i class="material-icons">computer</i>Dashboard </a>
+                <a href="../membres"><i class="material-icons">people</i>Gestion des inscriptions</a>
                 <a href="../emplois"><i class="material-icons">date_range</i>Gestion d'emploi du
                     temps</a>
                 <a href="../achats"><i class="material-icons">shopping_cart</i>Gestion des achats </a>
@@ -75,7 +76,7 @@
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="/membres">Membres</a></li>
             <li><a href="/membres/add">Ajouter Membres</a></li>
-            <li><a href="/achats">Achats</a></li>
+            <li><a href="/achats">Produits</a></li>
             <li><a href="/achats/add">Ajouter un Produits</a></li>
 
         </ul>
@@ -84,14 +85,13 @@
 
                 <ul class="right hide-on-med-and-down">
                     <li>
-                        <form class="col s12" action="/membres/trouver" class="browser-default right" method="GET">
+                        <form class="col s12" action="/trouver" class="browser-default right" method="GET">
                             <input id="search-input" placeholder="Search" type="text"
                                 class="browser-default search-field" name="q" autocomplete="on" aria-label="Search box">
                             <i class="material-icons search-icon foto">search</i>
                     </li>
                     </form>
                     <li><a href="/">Acceuil</a></li>
-                    <li><a href="#">plus</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
@@ -147,7 +147,6 @@
     // Event listener for keypress in search box/open
     document.getElementById('search-input').addEventListener('keyup', searchEngine);
     document.getElementById('search-input').addEventListener('focus', searchEngine);
-
 
 
 

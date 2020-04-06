@@ -1,5 +1,3 @@
-
-
 <div class="container" id="form">
 
 
@@ -55,17 +53,16 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <select multiple required name="typeS"
-                        oninvalid="this.setCustomValidity('Veuillez saisir un Numero de telephone Baliz!')"
-                        oninput="setCustomValidity('')">
+                    <select multiple name="typeS" class="validate">
                         <option value="" disabled selected>Choississez le type de sport</option>
-
                         <option value="Fitness">Fitness</option>
                         <option value="MMA">MMA</option>
                         <option value="Yoga">Yoga</option>
                         <option value="Natation">Natation</option>
                     </select>
                     <label>Type de sport</label>
+                    <span class="helper-text" data-error="Choississez le type de sport, BALIIZ!" data-success=""></span>
+
 
 
                 </div>
@@ -73,10 +70,11 @@
             <div class="row">
                 <div class="input-field col s12">
                     <select name="typeC">
-                        <option value="" disabled>Choississez le type de convention</option>
+                        <option value="" disabled selected>Choississez le type de convention</option>
                         <option value="Militaire">Militaire</option>
                         <option value="Police">Police</option>
                         <option value="CASORO">CASORO</option>
+
 
                     </select>
                     <label>VIP</label>
