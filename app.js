@@ -52,6 +52,10 @@ const Produit = mongoose.model("produits");
 require("./models/Emploi");
 const Emploi = mongoose.model("jours");
 
+// Load Rapport Model
+require("./models/Rapport");
+const Rapport = mongoose.model("rapports");
+
 // Handlebars Middleware
 app.engine(
   "handlebars",
@@ -133,6 +137,14 @@ app.get("/emplois", (req, res) => {
 
 });
 
+// Rapport  Page
+app.get("/rapports", (req, res) => {
+
+  res.render("rapports/rapport");
+
+});
+
+
 
 // // Add membre Form
 app.get("/membres/add", (req, res) => {
@@ -144,6 +156,7 @@ app.get("/membres/add", (req, res) => {
 app.get("/achats/add", (req, res) => {
   res.render("achats/add");
 });
+
 
 
 // EMPLOI DU TEMPS

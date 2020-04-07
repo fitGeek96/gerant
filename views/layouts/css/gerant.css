@@ -50,7 +50,7 @@ i {
   margin-left: auto;
   left: auto;
   right: auto;
-  padding-bottom: 22%;
+  padding-bottom: 24.5%;
   color: white;
   background: linear-gradient(rgb(44, 83, 100),
       rgb(32, 58, 67),
@@ -126,7 +126,7 @@ p {
   margin: 0;
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  color: white !important;
+  color: black !important;
 }
 
 .card_items {
@@ -305,4 +305,19 @@ input {
 .emploi_temp {
   -webkit-box-shadow: 2px 2px 15px 5px #000000;
   box-shadow: 2px 2px 15px 5px #000000;
+}
+
+
+/* rapports */
+
+
+
+.rapport {
+  -webkit-box-shadow: 2px 2px 15px 5px #000000;
+  box-shadow: 2px 2px 15px 5px #000000;
+  margin-top: 10% !important;
+}
+
+textarea {
+  margin-bottom: 5rem !important;
 }
