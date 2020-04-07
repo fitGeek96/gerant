@@ -79,7 +79,7 @@ app.use(methodOverride("_method"));
 
 // Index Route
 app.get("/", (req, res) => {
-  const title = "Système de gestion de gym Anti-Stress";
+  const title = "Bienvenue au Salle des sports Anti-Stress";
   res.render("index", {
     title: title
   });
@@ -121,7 +121,6 @@ app.get("/achats", (req, res) => {
 // emplois  Page
 app.get("/emplois", (req, res) => {
 
-  const title = "Emploi du temps d'entrainement";
 
   Emploi.find({}).sort({
       date: "desc"
@@ -129,7 +128,6 @@ app.get("/emplois", (req, res) => {
     .then(jours => {
       res.render("emplois/emploi", {
         jours: jours,
-        title: title
       });
     });
 

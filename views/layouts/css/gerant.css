@@ -20,8 +20,12 @@ a:hover {
   color: tomato !important;
 }
 
-h3 {
+h2 {
   text-align: center;
+  padding-top: 3rem;
+  word-spacing: 1rem;
+  font-family: 'Trade Winds', cursive;
+  text-shadow: -2px 6px 3px rgba(0, 0, 0, 0.95);
 }
 
 h4 {
@@ -34,6 +38,8 @@ i {
   margin-right: 1rem;
 }
 
+
+
 .row {
   margin-bottom: 0 !important;
 }
@@ -44,7 +50,7 @@ i {
   margin-left: auto;
   left: auto;
   right: auto;
-  padding-bottom: 50%;
+  padding-bottom: 22%;
   color: white;
   background: linear-gradient(rgb(44, 83, 100),
       rgb(32, 58, 67),
@@ -272,7 +278,7 @@ input {
 }
 
 
-.btn-floating.halfway-fab {
+#table .btn-floating.halfway-fab {
   position: relative !important;
 }
 
@@ -290,7 +296,7 @@ input {
 
 
 
-.btn-floating i {
+#table .btn-floating i {
 
   font-size: 1rem !important;
   line-height: 0 !important;
