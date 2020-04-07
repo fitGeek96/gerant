@@ -249,6 +249,7 @@ input {
   padding: 0 2rem;
 }
 
+
 #table {
   margin: 3rem 0 0 2rem;
   padding: 0;
@@ -263,7 +264,39 @@ input {
 }
 
 
-#table p {
-  width: 30% !important;
+#table.centered p {
+  width: 100% !important;
   display: inline-flex !important;
+  text-align: center !important;
+  padding: 0;
+}
+
+
+.btn-floating.halfway-fab {
+  position: relative !important;
+}
+
+#table .change_time {
+  font-size: 1rem;
+  margin-right: 10rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+#table .time_edit {
+  width: 50%;
+  display: flex;
+}
+
+
+
+.btn-floating i {
+
+  font-size: 1rem !important;
+  line-height: 0 !important;
+}
+
+.emploi_temp {
+  -webkit-box-shadow: 2px 2px 15px 5px #000000;
+  box-shadow: 2px 2px 15px 5px #000000;
 }

@@ -1,5 +1,4 @@
-<h4 style="color: rgb(54, 172, 8);">{{title}}</h4>
-<div class="container" id="table">
+<div class="container emploi_temp" id="table">
     <div class="row">
         <div class="col s12">
             <table class="responsive-table centered">
@@ -18,27 +17,31 @@
                 <tbody>
 
                     {{#each jours}}
+
                     <tr>
-                        <td>
-                            <p> {{timeD}}</p> <br> {{sportD}}
+
+                        <td><a href="/emplois/edit/{{id}}"
+                                class="btn-floating halfway-fab waves-effect waves-light blue change_time"><i
+                                    class="material-icons foto ">create</i></a>
+                            <p> {{timeD.debut}} - {{timeD.fin}} </p> {{sportD}}
                         </td>
                         <td>
-                            <p> {{timeL}}</p> {{sportL}}
+                            <p> {{timeL.debut}} - {{timeL.fin}}</p> {{sportL}}
                         </td>
                         <td>
-                            <p> {{timeM}}</p> {{sportM}}
+                            <p> {{timeM.debut}} - {{timeM.fin}}</p> {{sportM}}
                         </td>
                         <td>
-                            <p> {{timeMer}}</p> {{sportMer}}
+                            <p> {{timeMer.debut}} - {{timeMer.fin}}</p> {{sportMer}}
                         </td>
                         <td>
-                            <p> {{timeJ}}</p> {{sportJ}}
+                            <p> {{timeJ.debut}} - {{timeJ.fin}}</p> {{sportJ}}
                         </td>
                         <td>
-                            <p> {{timeV}}</p> {{sportV}}
+                            <p> {{timeV.debut}} - {{timeV.fin}}</p>{{sportV}}
                         </td>
                         <td>
-                            <p> {{timeS}}</p> {{sportS}}
+                            <p> {{timeS.debut}} - {{timeS.fin}}</p> {{sportS}}
                         </td>
 
 

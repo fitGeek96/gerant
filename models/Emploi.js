@@ -7,7 +7,12 @@ const EmploiSchema = new mongoose.Schema({
 
 
     timeD: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportD: {
         type: String,
@@ -15,7 +20,12 @@ const EmploiSchema = new mongoose.Schema({
     },
 
     timeL: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportL: {
         type: String,
@@ -23,7 +33,12 @@ const EmploiSchema = new mongoose.Schema({
     },
 
     timeM: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportM: {
         type: String,
@@ -31,7 +46,12 @@ const EmploiSchema = new mongoose.Schema({
     },
 
     timeMer: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportMer: {
         type: String,
@@ -39,7 +59,12 @@ const EmploiSchema = new mongoose.Schema({
     },
 
     timeJ: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportJ: {
         type: String,
@@ -47,7 +72,12 @@ const EmploiSchema = new mongoose.Schema({
     },
 
     timeV: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportV: {
         type: String,
@@ -55,7 +85,12 @@ const EmploiSchema = new mongoose.Schema({
     },
 
     timeS: {
-        type: [],
+        debut: {
+            type: String
+        },
+        fin: {
+            type: String
+        }
     },
     sportS: {
         type: String,

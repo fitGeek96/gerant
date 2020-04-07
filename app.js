@@ -22,23 +22,22 @@ const app = express();
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose
-mongoose
-  .connect("mongodb://localhost/membresDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => console.log("Base de donnees Membres Connected..."))
-  .catch(err => console.log(err));
 
 
 
 mongoose
-  .connect("mongodb://localhost/produitsDB", {
+  .connect("mongodb://localhost/BDD", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  .then(() => console.log("Base de donnees Produits Connected..."))
+  .then(() => console.log("Base de donnees   Connected..."))
   .catch(err => console.log(err));
+
+
+
+
+
+
 
 // Load membre Model
 require("./models/Membre");
@@ -270,19 +269,40 @@ app.post("/achats", (req, res) => {
 
 app.post("/emplois", (req, res) => {
   const newTraining = {
-    timeD: req.body.timeD,
+    timeD: {
+      debut: req.body.timeDd,
+      fin: req.body.timeDf
+    },
     sportD: req.body.sportD,
-    timeL: req.body.timeL,
+    timeL: {
+      debut: req.body.timeLd,
+      fin: req.body.timeLf
+    },
     sportL: req.body.sportL,
-    timeM: req.body.timeM,
+    timeM: {
+      debut: req.body.timeMd,
+      fin: req.body.timeMf
+    },
     sportM: req.body.sportM,
-    timeMer: req.body.timeMer,
+    timeMer: {
+      debut: req.body.timeMerd,
+      fin: req.body.timeMerf
+    },
     sportMer: req.body.sportMer,
-    timeJ: req.body.timeJ,
+    timeJ: {
+      debut: req.body.timeJd,
+      fin: req.body.timeJf
+    },
     sportJ: req.body.sportJ,
-    timeV: req.body.timeV,
+    timeV: {
+      debut: req.body.timeVd,
+      fin: req.body.timeVf
+    },
     sportV: req.body.sportV,
-    timeS: req.body.timeS,
+    timeS: {
+      debut: req.body.timeSd,
+      fin: req.body.timeSf
+    },
     sportS: req.body.sportS
 
   };
@@ -342,19 +362,32 @@ app.put("/emplois/:id", (req, res) => {
   }).then(jour => {
     // new values
 
-    jour.timeD = req.body.timeD;
+    jour.timeD.debut = req.body.timeDd;
+    jour.timeD.fin = req.body.timeDf;
     jour.sportD = req.body.sportD;
-    jour.timeL = req.body.timeL;
+
+    jour.timeL.debut = req.body.timeLd;
+    jour.timeL.fin = req.body.timeLf;
     jour.sportL = req.body.sportL;
-    jour.timeM = req.body.timeM;
+
+    jour.timeM.debut = req.body.timeMd;
+    jour.timeM.fin = req.body.timeMf;
     jour.sportM = req.body.sportM;
-    jour.timeMer = req.body.timeMer;
+
+    jour.timeMer.debut = req.body.timeMerd;
+    jour.timeMer.fin = req.body.timeMerf;
     jour.sportMer = req.body.sportMer;
-    jour.timeJ = req.body.timeJ;
+
+    jour.timeJ.debut = req.body.timeJd;
+    jour.timeJ.fin = req.body.timeJf;
     jour.sportJ = req.body.sportJ;
-    jour.timeV = req.body.timeV;
+
+    jour.timeV.debut = req.body.timeVd;
+    jour.timeV.fin = req.body.timeVf;
     jour.sportV = req.body.sportV;
-    jour.timeS = req.body.timeS;
+
+    jour.timeS.debut = req.body.timeSd;
+    jour.timeS.fin = req.body.timeSf;
     jour.sportS = req.body.sportS;
 
 

@@ -1,0 +1,111 @@
+<h4 style="color: rgb(54, 172, 8);">{{tit}}</h4>
+
+<div class="container" id="table">
+
+
+    <div class="row">
+        <form class="col s12" action="/emplois/{{jour.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+
+
+            <div class="col s12">
+                <table class="responsive-table centered">
+                    <thead>
+                        <tr id="jours">
+                            <th>Dimanche</th>
+                            <th>Lundi</th>
+                            <th>Mardi</th>
+                            <th>Mercredi</th>
+                            <th>Jeudi</th>
+                            <th>Vendredi</th>
+                            <th>Samedi</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <tr>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeDd"
+                                        value="{{jour.timeD.debut}}" placeholder="00:00">-<input class="input_time_edit"
+                                        type="text" name="timeDf" value="{{jour.timeD.fin}}" placeholder="00:00"></p>
+                                <br>
+                                <input type="text" name="sportD" value="{{jour.sportD}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeLd"
+                                        value="{{jour.timeL.debut}}" placeholder="00:00">-<input class="input_time_edit"
+                                        type="text" name="timeLf" value="{{jour.timeL.fin}}" placeholder="00:00"></p>
+                                <br>
+                                <input type="text" name="sportL" value="{{jour.sportL}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeMd"
+                                        value="{{jour.timeM.debut}}" placeholder="00:00">-<input class="input_time_edit"
+                                        type="text" name="timeMf" value="{{jour.timeM.fin}}" placeholder="00:00"></p>
+                                <br class="time">
+                                <input type="text" name="sportM" value="{{jour.sportM}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeMerd"
+                                        value="{{jour.timeMer.debut}}" placeholder="00:00">-<input
+                                        class="input_time_edit" type="text" name="timeMerf" value="{{jour.timeMer.fin}}"
+                                        placeholder="00:00">
+                                </p>
+                                <br>
+                                <input type="text" name="sportMer" value="{{jour.sportMer}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeJd"
+                                        value="{{jour.timeJ.debut}}" placeholder="00:00">-<input class="input_time_edit"
+                                        type="text" name="timeJf" value="{{jour.timeJ.fin}}" placeholder="00:00"></p>
+                                <br>
+                                <input type="text" name="sportJ" value="{{jour.sportJ}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeVd"
+                                        value="{{jour.timeVd}}" placeholder="00:00">-<input class="input_time_edit"
+                                        type="text" name="timeVf" value="{{jour.timeVf}}" placeholder="00:00"></p>
+                                <br>
+                                <input type="text" name="sportV" value="{{jour.sportV}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+                            <td>
+                                <p class="time_edit"> <input class="input_time_edit" type="text" name="timeSd"
+                                        value="{{jour.timeSd}}" placeholder="00:00">-<input class="input_time_edit"
+                                        type="text" name="timeSf" value="{{jour.timeSf}}" placeholder="00:00"></p>
+                                <br>
+                                <input type="text" name="sportS" value="{{jour.sportS}}"
+                                    placeholder="fitness, MMA ... "></p>
+                            </td>
+
+
+
+
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+
+            </div>
+
+            <button class="btn waves-effect waves-light cyan darken-3 foto" type="submit" name="action">Enregistrer
+                <i class="material-icons right foto">send</i>
+            </button>
+
+        </form>
+    </div>
+
+</div>
