@@ -24,6 +24,11 @@ const ProduitSchema = new mongoose.Schema({
         required: true
 
     },
+    prix: {
+        type: Number,
+        required: true
+
+    },
     avatarP: {
         type: String,
     }

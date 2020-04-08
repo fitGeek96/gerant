@@ -1,0 +1,19 @@
+{{#if error}}
+
+<div>
+    <h5 class="center-align red">{{error}}</h5>
+</div>
+
+{{/if}}
+
+
+
+{{#each errors}}
+
+<div>
+    <h5 class="center-align red">{{text}}</h5>
+</div>
+
+{{else}}
+
+{{/each}}

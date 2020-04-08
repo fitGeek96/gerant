@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 
 
-
+body {
+  margin: 0;
+  padding: 0;
+}
 
 * {
   font-family: "Josefin Sans", sans-serif;
@@ -23,9 +26,10 @@ a:hover {
 h2 {
   text-align: center;
   padding-top: 3rem;
-  word-spacing: 1rem;
-  font-family: 'Trade Winds', cursive;
+  word-spacing: .4rem;
+  font-family: 'Orbitron', sans-serif;
   text-shadow: -2px 6px 3px rgba(0, 0, 0, 0.95);
+  font-size: 4rem !important;
 }
 
 h4 {
@@ -34,10 +38,17 @@ h4 {
 
 i {
   margin-top: 1rem;
-  color: white !important;
   margin-right: 1rem;
 }
 
+
+span {
+  font-size: .7rem;
+}
+
+#form .row .cat {
+  font-size: .7rem;
+}
 
 
 .row {
@@ -50,11 +61,15 @@ i {
   margin-left: auto;
   left: auto;
   right: auto;
-  padding-bottom: 24.5%;
+  padding-bottom: 52%;
   color: white;
   background: linear-gradient(rgb(44, 83, 100),
       rgb(32, 58, 67),
       rgb(15, 32, 39));
+
+
+
+
 }
 
 .item {
@@ -308,14 +323,20 @@ input {
 }
 
 
+
 /* rapports */
 
 
 
-.rapport {
+.produit {
   -webkit-box-shadow: 2px 2px 15px 5px #000000;
   box-shadow: 2px 2px 15px 5px #000000;
-  margin-top: 10% !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+
 }
 
 textarea {

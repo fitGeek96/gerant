@@ -1,0 +1,37 @@
+<div class="container produit" style="margin-top: 5rem !important; backgrund-color: background: #f12711;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <div class="row">
+        <form class="col s12" action="/users/register" method="POST">
+            <i class="fas fa-dumbbell addd" style="font-size: 4rem;"></i>
+            <h3>ANTI-STRESS GYM</h3>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix" style="color:black;">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate" name="username" value="{{username}}" required>
+                    <label for="icon_prefix" style="color:rgb(182, 160, 160);">Nom d'utilisateur</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix" style="color:black;">lock</i>
+                    <input id="icon_telephone" type="password" class="validate" name="password" value="{{password}}"
+                        required>
+                    <label for="icon_motpasse" style="color:rgb(182, 160, 160);">Mot de passe</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix" style="color:black;">lock</i>
+                    <input id="icon_telephone" type="password" class="validate" name="password_2" value="{{password_2}}"
+                        required>
+                    <label for="icon_motpasse" style="color:rgb(182, 160, 160);">Confirmer Mot de passe</label>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action" style="  background: #23074d  !important;
+background: -webkit-linear-gradient(to bottom, #cc5333, #23074d) !important; background: linear-gradient(to bottom, #cc5333, #23074d)  !important;
+  font-family: 'Josefin Sans', sans-serif !important; margin-top: 3rem !important;
+ ">S'inscrire
+                <i class="material-icons right foto">send</i>
+            </button>
+
+        </form>
+    </div>
+</div>

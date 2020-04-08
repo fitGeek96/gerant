@@ -1,0 +1,46 @@
+{{#if user}}
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="/membres">Membres</a></li>
+    <li><a href="/membres/add">Ajouter Membres</a></li>
+    <li><a href="/achats">Produits</a></li>
+    <li><a href="/achats/add">Ajouter un Produits</a></li>
+
+</ul>
+<nav>
+    <div class="nav-wrapper">
+
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <form class="col s12" action="/trouver" class="browser-default right" method="GET">
+                    <input id="search-input" placeholder="Search" type="text" class="browser-default search-field"
+                        name="q" autocomplete="on" aria-label="Search box">
+                    <i class="material-icons search-icon foto">search</i>
+                </form>
+            </li>
+
+            <li><a href="/logout">Se déconnecter</a></li>
+            <li><a href="/">Acceuil</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </div>
+</nav>
+
+{{else}}
+<!-- Dropdown Structure -->
+
+<nav>
+    <div class="nav-wrapper">
+
+        <ul class=" hide-on-med-and-down">
+
+            <li><a href="/users/login">S'identifier</a></li>
+            <li><a href="/users/register">S'inscrire</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+{{/if}}

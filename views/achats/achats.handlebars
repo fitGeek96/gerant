@@ -4,18 +4,21 @@
 
         <div class="col s7">
             {{#each produits}}
-            <div class="card Medium grey">
+            <div class="card Medium" style=" background-color : background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
 
 
-                <div class="card-image">
+                <div class=" card-image">
                     <img src="../layouts/images/{{avatarP}}">
                     <a href="/achats/edit/{{id}}" class="btn-floating halfway-fab waves-effect waves-light blue"
                         id="ajouter"><i class="material-icons foto">create</i></a>
                     <form action="/achats/{{id}}?_method=DELETE" method="post">
                         <input type="hidden" name="_method" value="DELETE">
                         <button type="submit" value="delete"
-                            class="btn-floating halfway-fab waves-effect waves-light red"> <i
-                                class="material-icons foto">delete</i> </button>
+                            class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons foto">delete</i> </button>
                     </form>
                 </div>
 
@@ -24,6 +27,8 @@
                     <p> <span class="card_items"> Categorie :</span> {{categorie}} </p>
                     <p> <span class="card_items"> Numero du produit :</span> {{np}}</p>
                     <p> <span class="card_items"> Quantité :</span> {{qte}}</p>
+                    <p> <span class="card_items"> Prix :</span> {{prix}}DA</p>
+
 
 
                 </div>
@@ -33,7 +38,7 @@
             {{else}}
 
 
-            <h3 style="color: red;">
+            <h3 style="color: red; text-align:center;">
                 stock vide ...
             </h3>
 

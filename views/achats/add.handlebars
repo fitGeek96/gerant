@@ -1,10 +1,10 @@
-<div class="container" id="form">
+<div class="container produit" id="form">
 
 
     <div class="row">
         <form class="col s12" action="/achats" method="POST">
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s6">
                     <input placeholder="Saisir le nom" id="first_name" type="text" class="validate" name="nom" required
                         oninvalid="this.setCustomValidity('Veuillez saisir un Nom , Baliz!')"
                         oninput="setCustomValidity('')">
@@ -13,7 +13,7 @@
 
 
                 <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col s6">
                         <input id="text" type="text" class="validate" name="np" required
                             oninvalid="this.setCustomValidity('Veuillez saisir un Matricule du Produit, Baliz!')"
                             oninput="setCustomValidity('')">
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col s6">
                         <input id="text" type="number" class="validate" name="qte" required
                             oninvalid="this.setCustomValidity('Veuillez saisir une Quantité, Baliz!')"
                             oninput="setCustomValidity('')">
@@ -32,31 +32,27 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>
-                        <label> Categorie <br><br>
-                            <input name="categorie" value="Nutrition" type="radio" checked />
-                            <span>Compléments alimentaires</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="categorie" value="Vetements" type="radio" />
-                            <span>Vetements de sports Homme</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="categorie" value="Vetements" type="radio" />
-                            <span>Vetements de sports Femme</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="categorie" value="Vetements" type="radio" />
-                            <span>Accessoires de sports</span>
-                        </label>
-                    </p>
+                    <div class="input-field col s6">
+                        <input id="text" type="number" class="validate" name="prix" required
+                            oninvalid="this.setCustomValidity('Veuillez saisir un prix, Baliz!')"
+                            oninput="setCustomValidity('')">
+                        <label for="np">Prix</label>
+                        <span class="helper-text" data-error="Invalid" data-success=""></span>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select multiple name="categorie">
+                            <option value="" disabled selected>Choississez la categorie</option>
+                            <option value="Compléments alimentaires">Compléments alimentaires</option>
+                            <option value="Vetements de sports Homme">Vetements de sports Homme</option>
+                            <option value="Vetements de sports Femme">Vetements de sports Femme</option>
+                            <option value="Accessoires de sports">Accessoires de sports</option>
+                        </select>
+                        <label>Catégorie</label>
+                    </div>
+                </div>
+
 
                 <div class="row">
                     <div class="file-field input-field">

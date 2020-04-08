@@ -26,7 +26,7 @@
     <!-- GOOGLE FONTS -->
     <link href=" https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
 
     <title>Dashboard</title>
 </head>
@@ -35,31 +35,10 @@
 
     <div class="col s12 m4 l3">
 
-        <h4>Anti-stress Gym</h3>
-            <hr>
-            <br>
-            <br>
-            <div class="row valign-wrapper">
-                <div class="col s2">
-                    <img src="../layouts/images/monochrome-photo-of-smiling-woman-2764975.jpg" alt="me"
-                        class="circle responsive-img">
-                    <!-- notice the "circle" class -->
-                </div>
-                <div class="col s10">
-                    <span class="white-text">
-                        Benramdane Tahar
-                    </span>
-                </div>
-            </div>
 
-            <div>
-                <a href="/"><i class="material-icons">computer</i>Dashboard </a>
-                <a href="../membres"><i class="material-icons">people</i>Gestion des inscriptions</a>
-                <a href="../emplois"><i class="material-icons">date_range</i>Gestion d'emploi du
-                    temps</a>
-                <a href="../achats"><i class="material-icons">shopping_cart</i>Gestion des achats </a>
 
-            </div>
+        {{>sidebar}}
+
 
 
 
@@ -70,35 +49,10 @@
     <div class="col s12 m8 l9">
 
 
+        {{>navbar}}
 
 
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="/membres">Membres</a></li>
-            <li><a href="/membres/add">Ajouter Membres</a></li>
-            <li><a href="/achats">Produits</a></li>
-            <li><a href="/achats/add">Ajouter un Produits</a></li>
-
-        </ul>
-        <nav>
-            <div class="nav-wrapper">
-
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <form class="col s12" action="/trouver" class="browser-default right" method="GET">
-                            <input id="search-input" placeholder="Search" type="text"
-                                class="browser-default search-field" name="q" autocomplete="on" aria-label="Search box">
-                            <i class="material-icons search-icon foto">search</i>
-                    </li>
-                    </form>
-                    <li><a href="/">Acceuil</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i
-                                class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-        </nav>
-
+        {{>errors}}
         {{{body}}}
 
     </div>
