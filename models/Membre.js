@@ -44,6 +44,13 @@ const MembreSchema = new mongoose.Schema({
   },
   avatar: {
     type: String,
+  },
+  fin: {
+    type: String,
+    required: true
+  },
+  nbr_jour_rest: {
+    type: Number
   }
 });
 

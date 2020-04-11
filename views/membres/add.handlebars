@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s6">
                     <select multiple name="typeS" class="validate" required>
 
                         <option value="" disabled selected>Choississez le type de sport</option>
@@ -67,9 +67,7 @@
 
 
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s6">
                     <select multiple name="typeC">
                         <option value="" disabled selected>Choississez le type de convention</option>
                         <option value="Militaire">Militaire</option>
@@ -81,15 +79,25 @@
                 </div>
             </div>
 
+
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s6">
+                    <input id="password" type="date" class="validate" name="fin" required
+                        oninvalid="this.setCustomValidity('Veuillez saisir une date, Baliz!')"
+                        oninput="setCustomValidity('')">
+                    <label for="ID">fin d'abonnement</label>
+                    <span class="helper-text" data-error="" data-success=""></span>
+                </div>
+                <div class="input-field col s6">
                     <input id="password" type="text" class="validate" name="ID" required
                         oninvalid="this.setCustomValidity('Veuillez saisir un ID, Baliz!')"
                         oninput="setCustomValidity('')">
                     <label for="ID">Matricule du client ID</label>
                     <span class="helper-text" data-error="" data-success=""></span>
                 </div>
+
             </div>
+
             <div class="row">
                 <p>
                     <label>

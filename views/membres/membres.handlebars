@@ -38,7 +38,7 @@
 
                 {{/if}}
 
-
+                {{#if checkDate}}
                 <div class="card-content">
                     <p> <span class="card_items">Nom :</span> {{nom}}</p>
                     <p> <span class="card_items"> Prénom :</span> {{prenom}} </p>
@@ -48,21 +48,42 @@
                     <p> <span class="card_items"> Type de Sport : </span>{{typeS}}</p>
                     <p> <span class="card_items"> Type de Convention : </span>{{typeC}}</p>
                     <p> <span class="card_items">Sexe :</span> {{sexe}}</p>
+                    <p> <span class="card_items"><strong
+                                style="font-size: 1rem !important; color:rgb(255, 57, 57);">Jours
+                                restant :</span>
+                        {{nbr_jour_rest}}</strong></p>
+                    {{else}}
+                    <div class="card-content" style=" background:red;">
+                        <p> <span class="card_items">Nom :</span> {{nom}}</p>
+                        <p> <span class="card_items"> Prénom :</span> {{prenom}} </p>
+                        <p> <span class="card_items"> Date de naissance :</span> {{ddn}}</p>
+                        <p> <span class="card_items">Téléphone : </span> 0{{phone}}</p>
+                        <p> <span class="card_items">Email : </span> {{email}}</p>
+                        <p> <span class="card_items"> Type de Sport : </span>{{typeS}}</p>
+                        <p> <span class="card_items"> Type de Convention : </span>{{typeC}}</p>
+                        <p> <span class="card_items">Sexe :</span> {{sexe}}</p>
+                        <p> <span class="card_items"> <strong style="font-size: 1rem !important; color:snow">Jours
+                                    restant :</span>
+                            {{nbr_jour_rest}}</strong></p>
+                        {{/if}}
 
+
+
+
+                    </div>
                 </div>
+
+                {{else}}
+
+
+                <h3 style="color: red; text-align:center;">
+                    personne n'est encore inscrit ...
+                </h3>
+
+
+
+
+                {{/each}}
             </div>
-
-            {{else}}
-
-
-            <h3 style="color: red; text-align:center;">
-                personne n'est encore inscrit ...
-            </h3>
-
-
-
-
-            {{/each}}
         </div>
     </div>
-</div>

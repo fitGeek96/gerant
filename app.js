@@ -1,5 +1,4 @@
 //jshint esversion:6
-
 const express = require("express");
 const exphbs = require("express-handlebars");
 const Handlebars = require("handlebars");
@@ -7,15 +6,17 @@ const {
   allowInsecurePrototypeAccess
 } = require("@handlebars/allow-prototype-access");
 const methodOverride = require("method-override");
-const flash = require('connect-flash');
+const flash = require("connect-flash");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
-
 const path = require("path");
 const moment = require("moment");
+
+var current = moment();
+
 const {
   ensureAuthenticated
 } = require("./helpers/auth");
@@ -23,7 +24,6 @@ const {
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 const app = express();
-
 
 // Load membre Model
 require("./models/Membre");
@@ -42,8 +42,10 @@ require("./models/User");
 const User = mongoose.model("users");
 
 // DB Config
-const db = require('./config/database');
+const db = require("./config/database");
 
+// Moment countdown
+require("moment-countdown");
 
 
 // Connect to mongoose
@@ -82,25 +84,23 @@ app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 
 // Express session midleware
-app.use(session({
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true
-}));
-
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+  })
+);
 
 // passport middlewqre
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
 app.use(flash());
 
 // Global variables
 app.use(function (req, res, next) {
-
-  res.locals.error = req.flash('error');
+  res.locals.error = req.flash("error");
   res.locals.user = req.user || null;
   next();
 });
@@ -115,16 +115,40 @@ app.get("/", ensureAuthenticated, (req, res) => {
 
 // membre Index Page
 app.get("/membres", ensureAuthenticated, (req, res) => {
-  Membre.find({})
-    .sort({
+  Membre.find({}).sort({
       date: "desc"
     })
     .then(membres => {
-      res.render("membres/membres", {
-        membres: membres
+      membres.forEach((membre) => {
+
+        const nbr_jour_rest = (moment(membre.fin)).diff(current, 'days');
+
+        // console.log(moment(membre.fin).add(1, 'M').format("D-MM-YYYY"));
+        if (nbr_jour_rest > 0) {
+
+          membre.checkDate = true;
+          membre.nbr_jour_rest = nbr_jour_rest;
+
+        } else {
+          membre.checkDate = false;
+          membre.nbr_jour_rest = nbr_jour_rest;
+
+
+        }
       });
+      res.render("membres/membres", {
+        membres: membres,
+      });
+
+
+
     });
 });
+
+
+
+
+
 
 // Produits Index Page
 app.get("/achats", ensureAuthenticated, (req, res) => {
@@ -212,19 +236,35 @@ app.get("/trouver", ensureAuthenticated, (req, res) => {
 
   if (userID) {
     Membre.find({
-        ID: userID
-      },
-      function (err, foundmembres) {
-        if (err) {
-          console.log(err);
+      ID: userID
+    }).then(membres => {
+      membres.forEach((membre) => {
+
+        const nbr_jour_rest = (moment(membre.fin)).diff(current, 'days');
+
+        // console.log(moment(membre.fin).add(1, 'M').format("D-MM-YYYY"));
+        if (nbr_jour_rest > 0) {
+
+          membre.checkDate = true;
+          membre.nbr_jour_rest = nbr_jour_rest;
+
         } else {
-          res.render("trouver", {
-            membres: foundmembres
-          });
+          membre.checkDate = false;
+          membre.nbr_jour_rest = nbr_jour_rest;
+
+
         }
-      }
-    );
+      });
+      res.render("membres/membres", {
+        membres: membres,
+      });
+
+
+
+    });
+
   }
+
 });
 
 // MEMBRE Process Form
@@ -232,10 +272,11 @@ app.get("/trouver", ensureAuthenticated, (req, res) => {
 app.post("/membres", ensureAuthenticated, (req, res) => {
   const newUser = {
     ID: req.body.ID,
+    fin: req.body.fin,
     nom: req.body.nom,
     prenom: req.body.prenom,
     email: req.body.email,
-    ddn: req.body.ddn,
+    ddn: moment(req.body.ddn).format("D-MM-YYYY"),
     phone: req.body.tele,
     typeS: req.body.typeS,
     typeC: req.body.typeC,
@@ -243,9 +284,11 @@ app.post("/membres", ensureAuthenticated, (req, res) => {
     avatar: req.body.avatar
   };
 
-  newUser.ddn = moment(req.body.ddn).format("D-MM-YYYY");
+
 
   new Membre(newUser).save().then(membre => {
+    console.log(moment(req.body.jours).format("D-MM-YYYY"));
+
     res.redirect("/membres");
   });
 });
@@ -321,9 +364,9 @@ app.put("/membres/:id", ensureAuthenticated, (req, res) => {
   }).then(membre => {
     // new values
     membre.ID = req.body.ID;
+    membre.fin = req.body.fin;
     membre.nom = req.body.nom;
     membre.prenom = req.body.prenom;
-    membre.ddn = moment(req.body.ddn).format("D-MM-YYYY");
     membre.email = req.body.email;
     membre.phone = req.body.tele;
     membre.typeS = req.body.typeS;
@@ -490,9 +533,7 @@ app.post("/users/register", (req, res) => {
   }
 });
 
-
-
-// LOG OUT USER 
+// LOG OUT USER
 
 app.get("/logout", function (req, res) {
   req.logOut();
