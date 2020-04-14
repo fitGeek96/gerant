@@ -540,6 +540,92 @@ app.get("/logout", function (req, res) {
   res.redirect("/users/login");
 });
 
+
+// Programmes entrainement //
+
+app.get("/membres/pec", ensureAuthenticated, (req, res) => {
+  const title = "Programme d'entrainements des pectoraux";
+  res.render("membres/pec", {
+    title: title
+  });
+});
+
+app.get("/membres/dorso", ensureAuthenticated, (req, res) => {
+  const title = "Programme d'entrainements de Dorso";
+  res.render("membres/dorso", {
+    title: title
+  });
+});
+
+app.get("/membres/epaule", ensureAuthenticated, (req, res) => {
+  const title = "Programme d'entrainements des epaules";
+  res.render("membres/epaule", {
+    title: title
+  });
+});
+
+app.get("/membres/jambe", ensureAuthenticated, (req, res) => {
+  const title = "Programme d'entrainements des jambes";
+  res.render("membres/jambe", {
+    title: title
+  });
+});
+
+app.get("/membres/bras", ensureAuthenticated, (req, res) => {
+  const title = "Programme d'entrainements des Bras";
+  res.render("membres/bras", {
+    title: title
+  });
+});
+
+
+app.get("/membres/abs", ensureAuthenticated, (req, res) => {
+  const title = "Programme d'entrainements des Abdos";
+  res.render("membres/abs", {
+    title: title
+  });
+});
+
+
+// regime alinebtaire
+
+app.get("/emplois/ecto", ensureAuthenticated, (req, res) => {
+  const title = "Regime alimentaire pour Ectomorphe";
+  res.render("emplois/ecto", {
+    title: title
+  });
+});
+
+app.get("/emplois/meso", ensureAuthenticated, (req, res) => {
+  const title = "Regime alimentaire pour Mesomorphe";
+  res.render("emplois/meso", {
+    title: title
+  });
+});
+
+app.get("/emplois/endo", ensureAuthenticated, (req, res) => {
+  const title = "Regime alimentaire pour Endomorphe";
+  res.render("emplois/endo", {
+    title: title
+  });
+});
+
+app.get("/emplois/norm", ensureAuthenticated, (req, res) => {
+  res.render("emplois/ecto", {
+    title: title
+  });
+});
+
+
+app.get("/payer", ensureAuthenticated, (req, res) => {
+  const title = "Plan du paiement";
+  res.render("payer/payer", {
+    title: title
+  });
+});
+
+
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {

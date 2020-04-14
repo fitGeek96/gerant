@@ -1,50 +1,23 @@
-<div class="container" id="cardd" style=" padding-right:1rem; width: 100%;">
+<h4 style="color: orange;">Votre avancement durant ce Moi</h4>
+
+<div class="container" style="padding:0 !important; margin:0 !important;">
     <div class="row">
+        <div class="col s12 m12">
+
+            <ul class="chart">
+                <li>
+                    <span style="height:5%" title="graisse"></span>
+                </li>
+                <li>
+                    <span style="height:70%" title="Masse Musculaire"></span>
+                </li>
+                <li>
+                    <span style="height:50%" title="Volume Musculaire"></span>
+                </li>
+
+            </ul>
 
 
-        <div class="col s7">
-            {{#each produits}}
-            <div class="card Medium" style=" background-color : background: #373B44;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">
-
-
-                <div class=" card-image">
-                    <img src="../layouts/images/{{avatarP}}">
-                    <a href="/achats/edit/{{id}}" class="btn-floating halfway-fab waves-effect waves-light blue"
-                        id="ajouter"><i class="material-icons foto">create</i></a>
-                    <form action="/achats/{{id}}?_method=DELETE" method="post">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" value="delete"
-                            class="btn-floating halfway-fab waves-effect waves-light red">
-                            <i class="material-icons foto">delete</i> </button>
-                    </form>
-                </div>
-
-                <div class="card-content produits_items">
-                    <p> <span class="card_items"> Nom du Produit :</span> {{nom}}</p>
-                    <p> <span class="card_items"> Categorie :</span> {{categorie}} </p>
-                    <p> <span class="card_items"> Numero du produit :</span> {{np}}</p>
-                    <p> <span class="card_items"> Quantité :</span> {{qte}}</p>
-                    <p> <span class="card_items"> Prix :</span> {{prix}}DA</p>
-
-
-
-                </div>
-            </div>
-
-
-            {{else}}
-
-
-            <h3 style="color: red; text-align:center;">
-                stock vide ...
-            </h3>
-
-
-
-            {{/each}}
         </div>
     </div>
 </div>

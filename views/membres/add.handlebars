@@ -1,139 +1,117 @@
-<div class="container produit" id="form">
+<div class="container" id="cardd" style=" padding-right:1rem; width: 100%;">
 
 
     <div class="row">
-        <form class="col s12" action="/membres" method="POST">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="Saisir le nom" id="first_name" type="text" class="validate" name="nom" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir un Nom Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="first_name">Nom</label>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../layouts/images/chest.jpg">
+                    <span class="card-title">Programme Pectoraux</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons foto">remove_red_eye</i></a>
                 </div>
-                <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate" name="prenom" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir un Prenom Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="last_name">Prénom</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="ddn" type="date" name="ddn" class="validate" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir la date de naissance Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="ddn">Date de naissance</label>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="email" type="email" name="email" class="validate" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir une Adresse Email valide, Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="email">Email</label>
-
-                </div>
-            </div>
-
-
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="telephone" type="tel" name="tele" class="validate" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir un Numero de telephone Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="telephone">Téléphone</label>
-                    <span class="helper-text" data-error="Invalid" data-success=""></span>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <select multiple name="typeS" class="validate" required>
-
-                        <option value="" disabled selected>Choississez le type de sport</option>
-
-                        <option value="Fitness">Fitness</option>
-                        <option value="MMA">MMA</option>
-                        <option value="Yoga">Yoga</option>
-                        <option value="Natation">Natation</option>
-
-                    </select>
-                    <label>Type de sport</label>
-                    <span class="helper-text" data-error="Choississez le type de sport, BALIIZ!" data-success=""></span>
-
-
-                </div>
-                <div class="input-field col s6">
-                    <select multiple name="typeC">
-                        <option value="" disabled selected>Choississez le type de convention</option>
-                        <option value="Militaire">Militaire</option>
-                        <option value="Police">Police</option>
-                        <option value="CASORO">CASORO</option>
-
-                    </select>
-                    <label>VIP</label>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="password" type="date" class="validate" name="fin" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir une date, Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="ID">fin d'abonnement</label>
-                    <span class="helper-text" data-error="" data-success=""></span>
-                </div>
-                <div class="input-field col s6">
-                    <input id="password" type="text" class="validate" name="ID" required
-                        oninvalid="this.setCustomValidity('Veuillez saisir un ID, Baliz!')"
-                        oninput="setCustomValidity('')">
-                    <label for="ID">Matricule du client ID</label>
-                    <span class="helper-text" data-error="" data-success=""></span>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <p>
-                    <label>
-                        <input name="sexe" value="homme" type="radio" checked />
-                        <span>Homme</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="sexe" value="femme" type="radio" />
-                        <span>Femme</span>
-                    </label>
-                </p>
-            </div>
-
-            <div class="row">
-                <div class="file-field input-field">
-                    <div class="btn waves-effect waves-light cyan darken-3">
-                        <i class="large material-icons foto">add_a_photo</i>
-                        <input type="file" name="avatar" required
-                            oninvalid="this.setCustomValidity('Veuillez inserer une image!')"
-                            oninput="setCustomValidity('')">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../membres/pec">
+                            <h4>Acceder au programme</h4>
+                        </a>
                     </div>
 
                 </div>
             </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../layouts/images/dorso.jpg">
+                    <span class="card-title">Programme Dorso</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons foto">remove_red_eye</i></a>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../membres/dorso">
+                            <h4>Acceder au programme</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../layouts/images/epaule.jpg">
+                    <span class="card-title">Programme Epaules</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons foto">remove_red_eye</i></a>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../membres/epaule">
+                            <h4>Acceder au programme</h4>
+                        </a>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img
+                        src="../layouts/images/fitness-bodybuilding-bodybuilder-exercise-machine-wallpaper-preview.jpg">
+                    <span class="card-title">Programme Jambes</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons foto">remove_red_eye</i></a>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../membres/jambe">
+                            <h4>Acceder au programme</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../layouts/images/bras.jpg">
+                    <span class="card-title">Programme Bras</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons foto">remove_red_eye</i></a>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../membres/bras">
+                            <h4>Acceder au programme</h4>
+                        </a>
+                    </div>
 
-            <button class="btn waves-effect waves-light cyan darken-3 foto" type="submit" name="action">S'inscrire
-                <i class="material-icons right foto">send</i>
-            </button>
-
-        </form>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../layouts/images/abs.jpg">
+                    <span class="card-title">Programme Abdos</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons foto">remove_red_eye</i></a>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../membres/abs">
+                            <h4>Acceder au programme</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

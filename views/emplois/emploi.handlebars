@@ -1,62 +1,81 @@
-<div class="container emploi_temp" id="table">
-    <div class="row">
-        <div class="col s12">
-            <table class="responsive-table centered">
-                <thead>
-                    <tr id="jours">
-                        <th>Dimanche</th>
-                        <th>Lundi</th>
-                        <th>Mardi</th>
-                        <th>Mercredi</th>
-                        <th>Jeudi</th>
-                        <th>Vendredi</th>
-                        <th>Samedi</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-
-                    {{#each jours}}
-
-                    <tr>
-
-                        <td><a href="/emplois/edit/{{id}}"
-                                class="btn-floating halfway-fab waves-effect waves-light blue change_time"><i
-                                    class="material-icons foto ">create</i></a>
-                            <p> {{timeD.debut}} - {{timeD.fin}} </p> {{sportD}}
-                        </td>
-                        <td>
-                            <p> {{timeL.debut}} - {{timeL.fin}}</p> {{sportL}}
-                        </td>
-                        <td>
-                            <p> {{timeM.debut}} - {{timeM.fin}}</p> {{sportM}}
-                        </td>
-                        <td>
-                            <p> {{timeMer.debut}} - {{timeMer.fin}}</p> {{sportMer}}
-                        </td>
-                        <td>
-                            <p> {{timeJ.debut}} - {{timeJ.fin}}</p> {{sportJ}}
-                        </td>
-                        <td>
-                            <p> {{timeV.debut}} - {{timeV.fin}}</p>{{sportV}}
-                        </td>
-                        <td>
-                            <p> {{timeS.debut}} - {{timeS.fin}}</p> {{sportS}}
-                        </td>
+<div class="container" id="cardd" style=" padding-right:1rem; width: 100%;">
 
 
+    <div class="row" style="padding: 1rem 10rem;">
+        <div class="col s12 m12">
+            <div class="card" style="background-color: black;">
+                <div class="card-image">
+                    <p style="text-align: center !important; font-size: 1rem; padding: 0 1rem; color:white">Un
+                        ectomorphe est un
+                        type maigre typique.
+                        Les Ecto ont une
+                        construction légère avec de petites
+                        articulations et des muscles maigres. Habituellement, les ectomorphes ont de longs membres
+                        minces avec des muscles filandreux. Les épaules ont tendance à être fines avec peu de largeur.
+                    </p>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../emplois/ecto">
+                            <h4> Regime Ectomorphe </h4>
+                        </a>
+                    </div>
 
-                    </tr>
-
-                    {{/each}}
-
-
-
-                </tbody>
-            </table>
-
-
-
+                </div>
+            </div>
         </div>
     </div>
+    <div class="row" style="padding: 1rem 10rem;">
+        <div class="col s12 m12">
+            <div class="card" style="background-color: black;">
+                <div class="card-image">
+                    <p style="text-align: center !important; font-size: 1rem; padding: 0 1rem; color:white">Un
+                        Un
+                        mésomorphe a
+                        une grande structure osseuse, de gros muscles et un physique
+                        naturellement athlétique. Les mésomorphes sont le meilleur type de corps pour la
+                        musculation. Ils trouvent qu'il est assez facile de gagner et de perdre du poids. Ils
+                        sont naturellement forts, ce qui est la plate-forme idéale pour développer les muscles.
+                    </p>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../emplois/meso">
+                            <h4> Regime Mesomorphe </h4>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding: 1rem 10rem;">
+        <div class="col s12 m12">
+            <div class="card" style="background-color: black;">
+                <div class="card-image">
+                    <p style="text-align: center !important; font-size: 1rem; padding: 0 1rem; color:white">Un
+                        type de corps
+                        endomorphe est solide et généralement mou. Les endomorphes grossissent très
+                        facilement. Les endos sont généralement de construction plus courte avec des bras et des jambes
+                        épais. Les muscles sont forts, en particulier le haut des jambes. Les endomorphes trouvent
+                        qu'ils sont naturellement forts dans les exercices pour les jambes comme le squat.
+                    </p>
+                </div>
+                <div class="card-content">
+                    <div class="card-action">
+                        <a href="../emplois/endo">
+                            <h4> Regime Endomorphe </h4>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 </div>
