@@ -20,7 +20,7 @@
     "express-session": "^1.17.0",
     "handlebars-intl": "^1.1.2",
     "method-override": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-countdown": "0.0.3",
     "mongoose": "^5.9.7",
     "passport": "^0.4.1",
